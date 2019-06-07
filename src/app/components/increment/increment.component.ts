@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-increment',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class IncrementComponent implements OnInit {
-  legend: string = 'Leyenda'
-  progress: number = 50;
+  @Input() legend: string = 'Leyenda';
+  @Input() progress: number = 50;
 
   constructor() {}
 
