@@ -7,11 +7,11 @@
           <div
             class="progress-bar progress-bar-striped progress-bar-animated"
             role="progressbar"
-            [attr.atiaValueNow]="progress"
+            [attr.atiaValueNow]="progress1"
             aria-valuenow="75"
             aria-valuemin="0"
             aria-valuemax="100"
-            [style.width]="progress + '%'"
+            [style.width]="progress1 + '%'"
           ></div>
         </div>
         <br>
@@ -19,11 +19,11 @@
           <div
             class="progress-bar progress-bar-striped progress-bar-animated bg-success"
             role="progressbar"
-            [attr.atiaValueNow]="progress"
+            [attr.atiaValueNow]="progress2"
             aria-valuenow="75"
             aria-valuemin="0"
             aria-valuemax="100"
-            [style.width]="progress + '%'"
+            [style.width]="progress2 + '%'"
           ></div>
         </div>
       </div>
@@ -35,14 +35,14 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <app-increment legend="Progress azul" [progress]="20"></app-increment>
+        <app-increment legend="Progress azul" [progress]="progress1" (changeValue)="progress1 = $event"></app-increment>
       </div>
     </div>
   </div>
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-          <app-increment legend="Progress verde"></app-increment>
+          <app-increment legend="Progress verde" [progress]="progress2" (changeValue)="progress2 = $event"></app-increment>
       </div>
     </div>
   </div>
