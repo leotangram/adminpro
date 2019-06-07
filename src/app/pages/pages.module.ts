@@ -7,12 +7,16 @@ import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesRoutingModule } from './pages-routing.module';
 
+// Temproal
+import { IncrementComponent } from '../components/increment/increment.component';
+
 @NgModule({
   declarations: [
     DashboardComponent,
     ProgressComponent,
     Graphics1Component,
-    PagesComponent
+    PagesComponent,
+    IncrementComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graphics1Component],
   imports: [PagesRoutingModule, SharedModule, FormsModule]
