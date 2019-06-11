@@ -32,4 +32,22 @@ export class IncrementComponent implements OnInit {
     this.progress = this.progress + value;
     this.changeValue.emit(this.progress);
   }
+
+  /**
+   * Determines whether change on
+   * @param newValue
+   */
+  onChange(newValue: number) {
+    let elementHTML: any = document.getElementsByName('progress')[0];
+
+    if (newValue >= 100) {
+      this.progress = 100;
+    } else if (newValue <= 0) {
+      this.progress = 0;
+    } else {
+      this.progress = newValue;
+    }
+    elementHTML.value = this.progress;
+    this.changeValue.emit(this.progress);
+  }
 }
