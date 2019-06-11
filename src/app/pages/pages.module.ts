@@ -11,6 +11,7 @@ import { ChartsModule } from 'ng2-charts';
 // Temproal
 import { IncrementComponent } from '../components/increment/increment.component';
 import { GraphicDoughnutComponent } from '../components/graphic-doughnut/graphic-doughnut.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GraphicDoughnutComponent } from '../components/graphic-doughnut/graphic
     Graphics1Component,
     PagesComponent,
     IncrementComponent,
-    GraphicDoughnutComponent
+    GraphicDoughnutComponent,
+    AccountSettingsComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graphics1Component],
   imports: [PagesRoutingModule, SharedModule, FormsModule, ChartsModule]
