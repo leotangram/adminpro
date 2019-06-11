@@ -1,3 +1,66 @@
-<p>
-  graphics1 works!
-</p>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <div>
+            <h4 class="card-title">{{ graphics.graphic1.legend }}</h4>
+            <app-graphic-doughnut
+              [doughnutChartLabels]="graphics.graphic1.labels"
+              [doughnutChartData]="graphics.graphic1.data"
+              [doughnutChartType]="graphics.graphic1.type"
+            ></app-graphic-doughnut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <div>
+            <h4 class="card-title">{{ graphics.graphic2.legend }}</h4>
+            <app-graphic-doughnut
+              [doughnutChartLabels]="graphics.graphic2.labels"
+              [doughnutChartData]="graphics.graphic2.data"
+              [doughnutChartType]="graphics.graphic2.type"
+            ></app-graphic-doughnut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <div>
+            <h4 class="card-title">{{ graphics.graphic3.legend }}</h4>
+            <app-graphic-doughnut
+              [doughnutChartLabels]="graphics.graphic3.labels"
+              [doughnutChartData]="graphics.graphic3.data"
+              [doughnutChartType]="graphics.graphic3.type"
+            ></app-graphic-doughnut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div>
+          <div>
+            <h4 class="card-title">{{ graphics.graphic4.legend }}</h4>
+            <app-graphic-doughnut
+              [doughnutChartLabels]="graphics.graphic4.labels"
+              [doughnutChartData]="graphics.graphic4.data"
+              [doughnutChartType]="graphics.graphic4.type"
+            ></app-graphic-doughnut>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,9 +6,11 @@ import { Graphics1Component } from './graphics1/graphics1.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesRoutingModule } from './pages-routing.module';
+import { ChartsModule } from 'ng2-charts';
 
 // Temproal
 import { IncrementComponent } from '../components/increment/increment.component';
+import { GraphicDoughnutComponent } from '../components/graphic-doughnut/graphic-doughnut.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { IncrementComponent } from '../components/increment/increment.component'
     ProgressComponent,
     Graphics1Component,
     PagesComponent,
-    IncrementComponent
+    IncrementComponent,
+    GraphicDoughnutComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graphics1Component],
-  imports: [PagesRoutingModule, SharedModule, FormsModule]
+  imports: [PagesRoutingModule, SharedModule, FormsModule, ChartsModule]
 })
 export class PagesModule {}
