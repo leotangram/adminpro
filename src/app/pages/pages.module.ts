@@ -12,6 +12,7 @@ import { ChartsModule } from 'ng2-charts';
 import { IncrementComponent } from '../components/increment/increment.component';
 import { GraphicDoughnutComponent } from '../components/graphic-doughnut/graphic-doughnut.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PrimisesComponent } from './primises/primises.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     PagesComponent,
     IncrementComponent,
     GraphicDoughnutComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PrimisesComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graphics1Component],
   imports: [PagesRoutingModule, SharedModule, FormsModule, ChartsModule]
