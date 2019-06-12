@@ -48,6 +48,10 @@ export class SettingsService {
     this.saveAjusts();
   }
 }
+
+/**
+ * Ajusts interface
+ */
 interface AjustsInterface {
   themeUrl: string;
   theme: string;

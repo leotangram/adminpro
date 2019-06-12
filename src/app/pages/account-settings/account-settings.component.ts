@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { SettingsService } from 'src/app/services/settings.service';
+import { link } from 'fs';
 
 @Component({
   selector: 'app-account-settings',
@@ -13,7 +14,9 @@ export class AccountSettingsComponent implements OnInit {
     public settingsSetvice: SettingsService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.addCheck();
+  }
 
   /**
    * Changes color
@@ -34,5 +37,16 @@ export class AccountSettingsComponent implements OnInit {
       ref.classList.remove('working');
     }
     link.classList.add('working');
+  }
+
+  addCheck() {
+    let selectors: any = document.getElementsByClassName('selector');
+    let theme = this.settingsSetvice.ajusts.theme;
+    for (const ref of selectors) {
+      if (ref.getAttribute('data-theme') === theme) {
+        ref.classList.add('working');
+        break;
+      }
+    }
   }
 }
