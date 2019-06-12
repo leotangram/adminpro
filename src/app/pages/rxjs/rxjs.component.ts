@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { retry } from 'rxjs/operators';
+import { Observable, Subscriber } from 'rxjs';
+import { retry, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-rxjs',
@@ -27,21 +27,24 @@ export class RxjsComponent implements OnInit {
       );
   }
 
-  cameBackObservable(): Observable<number> {
+  cameBackObservable(): Observable<any> {
     return new Observable(observer => {
       let counter = 0;
       let interval = setInterval(() => {
-        counter += 1;
-        observer.next(counter);
+        counter++;
+        const exit = {
+          value: counter
+        };
+        observer.next(exit);
         if (counter === 3) {
           clearInterval(interval);
           observer.complete();
         }
-        if (counter === 2) {
-          // clearInterval(interval);
-          observer.error('Auxilio!');
-        }
+        // if (counter === 2) {
+        //   // clearInterval(interval);
+        //   observer.error('Auxilio!');
+        // }
       }, 1000);
-    });
+    }).pipe(map(result => result.value));
   }
 }
