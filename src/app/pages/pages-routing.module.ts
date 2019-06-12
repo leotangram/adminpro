@@ -5,6 +5,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graphics1Component } from './graphics1/graphics1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PrimisesComponent } from './primises/primises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'progress', component: ProgressComponent },
       { path: 'graphics1', component: Graphics1Component },
       { path: 'promises', component: PrimisesComponent },
+      { path: 'rxjs', component: RxjsComponent },
       { path: 'account-settings', component: AccountSettingsComponent },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
     ]

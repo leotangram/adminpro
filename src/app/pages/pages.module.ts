@@ -13,6 +13,7 @@ import { IncrementComponent } from '../components/increment/increment.component'
 import { GraphicDoughnutComponent } from '../components/graphic-doughnut/graphic-doughnut.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PrimisesComponent } from './primises/primises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PrimisesComponent } from './primises/primises.component';
     IncrementComponent,
     GraphicDoughnutComponent,
     AccountSettingsComponent,
-    PrimisesComponent
+    PrimisesComponent,
+    RxjsComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graphics1Component],
   imports: [PagesRoutingModule, SharedModule, FormsModule, ChartsModule]
