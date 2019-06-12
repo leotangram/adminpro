@@ -12,23 +12,28 @@ export class PrimisesComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Promises primises component
+   */
   promise() {
-    let promise = new Promise((resolve, reject) => {
+    this.counterThreeSeconds()
+      .then(message => console.log('Terminó', message))
+      .catch(error => console.error('Error en la promesa', error));
+  }
+
+  counterThreeSeconds(): Promise<boolean> {
+    return new Promise((resolve, reject) => {
       let counter = 0;
       let interval = setInterval(() => {
         counter += 1;
         console.log(counter);
 
         if (counter === 3) {
-          resolve('OK!');
+          resolve(true);
           // reject('Simplemente un error');
           clearInterval(interval);
         }
       }, 1000);
     });
-
-    promise
-      .then(message => console.log('Terminó', message))
-      .catch(error => console.error('Error en la promesa', error));
   }
 }
